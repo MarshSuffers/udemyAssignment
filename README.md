@@ -7,20 +7,20 @@ In this module I learned why typescript is(javascript with types), why you'd wan
 
 # sections 3-4 summary
 
-diedi
+This module was mostly about leanring how to configure the tsconfig file. We learned how to target specific versions of javascript, what other things were possible to configure(tyoe checking, quality checks, etc), and why you would use that versus just tsc. We also made a demo calculator, which let us see what actually developing with typescript is like.
 
 # sections 5-6 summary
 
-diedi
+blank
 
 # sections 7-8 summary
 
-diedi
+blank
 
 # sections 9-10 summary
 
-diedi
+blank
 
 # sections 11-12 summary
 
-diedi
+blank
