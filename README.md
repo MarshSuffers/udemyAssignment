@@ -23,4 +23,4 @@ The purpose of a singleton pattern is to make sure that there's only one instanc
 
 # sections 11-12 summary
 
-blank
+A decorator is basically code that edits other code - like decorating a room, i'd imagine(or maybe that ISNT why its named that who knows).  Using one you can do all sorts of stuff, add types, classes, whatever. There is a pretty big difference between new and old decorators, but I only used the one. One practical use for them would be a video game ai, maybe? Edit the code as time goes on, adding or taking away behavoirs?
