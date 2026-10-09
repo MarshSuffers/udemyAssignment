@@ -7,6 +7,7 @@ function generatePerson() {
   const randomEmail: string = faker.internet.email();
 
   let identity: person = { name: randomName, email: randomEmail };
+  
   console.log(identity)
 }
 
