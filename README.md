@@ -15,7 +15,7 @@ A class is a vanilla javascript feature that lets you essentially create objects
 
 # sections 7-8 summary
 
-blank
+Generic types allow you to take advantage of some things the any type doesn't, like type gaurds. The any type is basically garbage data in typescript, outside of a few niche scenarios, because you can'treally use typescript features with it. Generic types also let you write way less code than the any type if you reuse it a bunch.
 
 # sections 9-10 summary
 
