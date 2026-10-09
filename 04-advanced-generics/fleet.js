@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// type guard
 function isHeavyMachinery(vehicle) {
     return "maxLiftingCapacity" in vehicle;
 }
@@ -8,7 +7,6 @@ class FleetManager {
     constructor() {
         this.vehicles = [];
     }
-    // Add vehicle
     addVehicle(vehicle) {
         this.vehicles.push(vehicle);
         console.log(`${vehicle.make} ${vehicle.model} added to fleet.`);
@@ -22,7 +20,6 @@ class FleetManager {
         }
         return `Service scheduled for ${input.toDateString()}.`;
     }
-    // lifting
     calculateLoadLimit(vehicle) {
         if (isHeavyMachinery(vehicle)) {
             return `${vehicle.make} ${vehicle.model} has a maximum lifting capacity of ${vehicle.maxLiftingCapacity} kg.`;
@@ -33,9 +30,7 @@ class FleetManager {
         console.log(this.vehicles);
     }
 }
-// fleetmanager
 const fleet = new FleetManager();
-// road vehicle
 const truck = {
     VIN: "TRUCK123456",
     make: "Ford",
@@ -43,7 +38,6 @@ const truck = {
     lastServiceDate: new Date("2026-01-15"),
     engineHours: 1200,
 };
-// heavy machinery
 const crane = {
     VIN: "CRANE987654",
     make: "Caterpillar",
@@ -52,13 +46,11 @@ const crane = {
     engineHours: 2500,
     maxLiftingCapacity: 5000,
 };
-// add vehicles to fleet
 fleet.addVehicle(truck);
 fleet.addVehicle(crane);
 console.log(fleet.scheduleService(5000));
 console.log(fleet.scheduleService(new Date("2026-11-01")));
 console.log(fleet.calculateLoadLimit(truck));
 console.log(fleet.calculateLoadLimit(crane));
-// display fleet
 fleet.listVehicles();
 //# sourceMappingURL=fleet.js.map

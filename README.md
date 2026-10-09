@@ -19,7 +19,7 @@ Generic types allow you to take advantage of some things the any type doesn't, l
 
 # sections 9-10 summary
 
-blank
+The purpose of a singleton pattern is to make sure that there's only one instance, that all clients could look at at the same time. In this demo, that would be the linked list numlist. It makes your code way more effient, and makes sure that multiple things looking at it at once dont mess anything up.
 
 # sections 11-12 summary
 
