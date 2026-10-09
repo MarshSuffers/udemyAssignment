@@ -3,11 +3,11 @@ interface iAccount {
   amount: number;
   interest?: number;
 
-  deposit(): void;
+  deposit(amount: number): void;
 }
 
 interface iCheckingAccount extends iAccount {
-  withdraw(): void;
+  withdraw(amount: number): void;
 }
 
 class savingsAccount implements iAccount {
@@ -21,7 +21,15 @@ class savingsAccount implements iAccount {
     this.interest = interest;
   }
 
-  deposit(): void {}
+  deposit(amount: number): void {
+    if (amount <= 0) {
+      console.log("Deposit must be greater than zero.");
+      return;
+    }
+
+    this.amount += amount;
+    console.log(`Deposited $${amount}. New balance: $${this.amount}`);
+  }
 }
 
 class checkingAccount implements iCheckingAccount {
@@ -33,10 +41,41 @@ class checkingAccount implements iCheckingAccount {
     this.amount = amount;
   }
 
-  deposit(): void {}
-  withdraw(): void {}
+  deposit(amount: number): void {
+    if (amount <= 0) {
+      console.log("Deposit must be greater than zero.");
+      return;
+    }
+
+    this.amount += amount;
+    console.log(`Deposited $${amount}. New balance: $${this.amount}`);
+  }
+  withdraw(amount: number): void {
+    if (amount <= 0) {
+      console.log("Withdrawal must be greater than zero.");
+      return;
+    }
+
+    if (amount > this.amount) {
+      console.log("Insufficient funds!");
+      return;
+    }
+
+    this.amount -= amount;
+    console.log(`Withdrew $${amount}. New balance: $${this.amount}`);
+  }
 }
 
-new checkingAccount("Max", 100 );
+const checking = new checkingAccount("Max", 100);
+const savings = new savingsAccount("Max", 200, 5);
 
-new savingsAccount("Max", 200, 5);
+console.log(checking);
+console.log(savings);
+
+checking.deposit(50);
+checking.withdraw(100);
+
+savings.deposit(300);
+
+console.log(checking);
+console.log(savings);
