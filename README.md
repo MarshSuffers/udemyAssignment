@@ -11,7 +11,7 @@ This module was mostly about leanring how to configure the tsconfig file. We lea
 
 # sections 5-6 summary
 
-this module gave a review of several core components of jasvascript (arrow functions, const vs let), and taught several things about classes and interfaces. It went ov how compiling worked as well. It went over the differences between js and ts in Setters and Getters, classes, and what things like 'public', 'private', and 'readonly' are.
+A class is a vanilla javascript feature that lets you essentially create objects, while an Interface is a typescript feature that lets you force a shape and/or type onto a class. The key difference is that classes have logic, while interfaces just assign a shape/promise.
 
 # sections 7-8 summary
 
