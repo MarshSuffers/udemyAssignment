@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const INITIAL_SETTINGS = {
     Volume: 50,
     Brightness: 75,
@@ -49,4 +47,5 @@ appSettings.setSetting("Username", "Jordan");
 appSettings.setSetting("Volume", 150);
 appSettings.setSetting("Username", "");
 appSettings.listSettings();
+export {};
 //# sourceMappingURL=settings.js.map

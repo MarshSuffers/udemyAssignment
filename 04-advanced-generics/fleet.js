@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function isHeavyMachinery(vehicle) {
     return "maxLiftingCapacity" in vehicle;
 }
@@ -53,4 +51,5 @@ console.log(fleet.scheduleService(new Date("2026-11-01")));
 console.log(fleet.calculateLoadLimit(truck));
 console.log(fleet.calculateLoadLimit(crane));
 fleet.listVehicles();
+export {};
 //# sourceMappingURL=fleet.js.map

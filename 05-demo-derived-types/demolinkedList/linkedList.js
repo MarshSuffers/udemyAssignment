@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 class listNode {
     constructor(value) {
         this.value = value;
@@ -39,4 +37,5 @@ numList.add(-3);
 console.log(numList.getNumElements());
 numList.print();
 const nameList = new linkedList();
+export {};
 //# sourceMappingURL=linkedList.js.map

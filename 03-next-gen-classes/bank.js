@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 class savingsAccount {
     constructor(owner, amount, interest) {
         this.owner = owner;
@@ -55,4 +53,5 @@ checking.withdraw(100);
 savings.deposit(300);
 console.log(checking);
 console.log(savings);
+export {};
 //# sourceMappingURL=bank.js.map

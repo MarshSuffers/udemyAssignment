@@ -1,4 +1,3 @@
-"use strict";
 var __runInitializers = (this && this.__runInitializers) || function (thisArg, initializers, value) {
     var useValue = arguments.length > 2;
     for (var i = 0; i < initializers.length; i++) {
@@ -37,18 +36,16 @@ var __setFunctionName = (this && this.__setFunctionName) || function (f, name, p
     if (typeof name === "symbol") name = name.description ? "[".concat(name.description, "]") : "";
     return Object.defineProperty(f, "name", { configurable: true, value: prefix ? "".concat(prefix, " ", name) : name });
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-function NotifyOnChange(target, context) {
+function notifyChange(target, context) {
     return function (newStatus) {
         console.log(`[NOTIFICATION]: Status changed to: ${newStatus}`);
         target.call(this, newStatus);
     };
 }
-function DisableDelete(constructor, context) {
+function disableDelete(constructor, context) {
     return class extends constructor {
         constructor(...args) {
             super(...args);
-            // Protect methods on the instance from being overwritten or deleted
             const prototype = Object.getPrototypeOf(this);
             for (const name of Object.getOwnPropertyNames(prototype)) {
                 if (name === "constructor")
@@ -65,14 +62,14 @@ function DisableDelete(constructor, context) {
         }
     };
 }
-let UserAccount = (() => {
-    let _classDecorators = [DisableDelete];
+let userAccount = (() => {
+    let _classDecorators = [disableDelete];
     let _classDescriptor;
     let _classExtraInitializers = [];
     let _classThis;
     let _instanceExtraInitializers = [];
     let _updateStatus_decorators;
-    var UserAccount = _classThis = class {
+    var userAccount = _classThis = class {
         constructor(status) {
             this.status = __runInitializers(this, _instanceExtraInitializers);
             this.status = status;
@@ -81,22 +78,23 @@ let UserAccount = (() => {
             this.status = newStatus;
         }
     };
-    __setFunctionName(_classThis, "UserAccount");
+    __setFunctionName(_classThis, "userAccount");
     (() => {
         const _metadata = typeof Symbol === "function" && Symbol.metadata ? Object.create(null) : void 0;
-        _updateStatus_decorators = [NotifyOnChange];
+        _updateStatus_decorators = [notifyChange];
         __esDecorate(_classThis, null, _updateStatus_decorators, { kind: "method", name: "updateStatus", static: false, private: false, access: { has: obj => "updateStatus" in obj, get: obj => obj.updateStatus }, metadata: _metadata }, null, _instanceExtraInitializers);
         __esDecorate(null, _classDescriptor = { value: _classThis }, _classDecorators, { kind: "class", name: _classThis.name, metadata: _metadata }, null, _classExtraInitializers);
-        UserAccount = _classThis = _classDescriptor.value;
+        userAccount = _classThis = _classDescriptor.value;
         if (_metadata) Object.defineProperty(_classThis, Symbol.metadata, { enumerable: true, configurable: true, writable: true, value: _metadata });
         __runInitializers(_classThis, _classExtraInitializers);
     })();
-    return UserAccount = _classThis;
+    return userAccount = _classThis;
 })();
-const user = new UserAccount("Inactive");
+const user = new userAccount("Inactive");
 console.log("Initial status:", user.status);
 user.updateStatus("Active");
 console.log("Current status:", user.status);
 user.updateStatus("Suspended");
-console.log("Current status:", user.status);
+console.log("Current status:", user.status); //nice
+export {};
 //# sourceMappingURL=email.js.map

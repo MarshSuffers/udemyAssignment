@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const item1 = {
     name: "notebook",
     price: 5,
@@ -37,4 +35,5 @@ function listValue() {
 list();
 listAvailible();
 listValue();
+export {};
 //# sourceMappingURL=inventory.js.map
