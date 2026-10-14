@@ -24,3 +24,7 @@ The purpose of a singleton pattern is to make sure that there's only one instanc
 # sections 11-12 summary
 
 A decorator is basically code that edits other code - like decorating a room, i'd imagine(or maybe that ISNT why its named that who knows).  Using one you can do all sorts of stuff, add types, classes, whatever. There is a pretty big difference between new and old decorators, but I only used the one. One practical use for them would be a video game ai, maybe? Edit the code as time goes on, adding or taking away behavoirs?
+
+# Node.js & TypeScript Integration
+
+When building a server with Typescript you enjoy all the same benefits of any other typescript project. Specifying types makes it easier to catch errors(especially in routing), encourages cleaner, more readable code, and also shortens how much code you need to write. All of this is EXTRA useful when working with servers. In order to use it basically all you need to do is define a few things (req, res) if youre making a multi-file server, and download all of those @types.
